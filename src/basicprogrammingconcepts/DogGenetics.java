@@ -25,17 +25,26 @@ int breed2 = 0;
 int breed3 = 0;
 int breed4 = 0;
 int breed5 = 0;
+int maxPercentage=100;
+
+
 while(sum != 100)
 {
-breed1 = ran.nextInt(100);
-  
- breed2 = ran.nextInt(100-breed1);
-  
- breed3= ran.nextInt(100-breed2);
+breed1 = ran.nextInt(maxPercentage);
 
-breed4 = ran.nextInt(100-breed3);
+maxPercentage=maxPercentage-breed1;
   
-breed5 = ran.nextInt(100-breed4);
+ breed2 = ran.nextInt(maxPercentage);
+ 
+maxPercentage=maxPercentage-breed2;
+  
+ breed3= ran.nextInt(maxPercentage);
+ maxPercentage=maxPercentage-breed3;
+
+breed4 = ran.nextInt(maxPercentage);
+  
+breed5 = maxPercentage;
+
 sum = breed1 + breed2 +breed3 + breed4 + breed5;
 }
   
